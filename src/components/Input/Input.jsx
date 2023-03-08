@@ -1,10 +1,13 @@
 import { useState } from "react";
 import styles from "../../styles/input.module.scss";
 import { ImSearch } from "react-icons/im";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getWord } from "../../fetuares/word/wordSlice";
 const Input = () => {
   const dispatch = useDispatch();
+
+  const theme = useSelector(({ theme }) => theme);
+
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -14,10 +17,13 @@ const Input = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(getWord(value));
+    setValue("");
   };
 
+  const style = theme === "dark" ? styles.form_dark : styles.form;
+
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={style} onSubmit={handleSubmit}>
       <input
         placeholder="type any word"
         type="text"

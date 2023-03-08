@@ -22,3 +22,29 @@
 
   margin-bottom: 50px;
 }
+
+.form_dark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4140406f;
+
+  outline: none;
+
+  input {
+    border: none;
+    color: #fff;
+    background-color: #ffffff00;
+    width: 100%;
+    padding: 20px 0px;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  margin-bottom: 50px;
+}

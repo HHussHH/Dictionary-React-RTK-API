@@ -1,17 +1,29 @@
 import { MenuItem, Select } from "@material-ui/core";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import styles from "../../styles/header.module.scss";
+import { useSelector } from "react-redux";
 
 const CustomSelector = () => {
-  const [age, setAge] = useState("");
+  const [font, setFont] = useState("serif");
+  const theme = useSelector(({ theme }) => theme);
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setFont(event.target.value);
   };
+
+  useEffect(() => {
+    document.body.setAttribute("data-ff", font);
+  }, [font]);
+
   return (
-    <Select value={age} displayEmpty onChange={handleChange} disableUnderline>
-      <MenuItem value="">Serif</MenuItem>
-      <MenuItem value="1">Шрифт 1</MenuItem>
-      <MenuItem value="2">Шрифт 2</MenuItem>
-      <MenuItem value="3">Шрифт 3</MenuItem>
+    <Select
+      style={{ color: theme === "dark" ? "white" : null }}
+      value={font}
+      onChange={handleChange}
+      disableUnderline
+      className={styles.select}
+    >
+      <MenuItem value="serif">Serif</MenuItem>
+      <MenuItem value="roboto">Roboto</MenuItem>
     </Select>
   );
 };
