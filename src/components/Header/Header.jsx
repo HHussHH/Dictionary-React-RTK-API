@@ -27,6 +27,7 @@ const Header = () => {
   const handleReset = () => {
     dispatch(getWord("hello"));
   };
+
   return (
     <div className={styles.header}>
       <BiBookAlt size={40} color={style} onClick={handleReset} />
