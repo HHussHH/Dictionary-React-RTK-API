@@ -1,0 +1,24 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #e4e2e26f;
+
+  outline: none;
+
+  input {
+    border: none;
+    background-color: #ffffff00;
+    width: 100%;
+    padding: 20px 0px;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  margin-bottom: 50px;
+}

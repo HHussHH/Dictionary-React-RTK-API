@@ -1,10 +1,15 @@
-import Veggie from "../components/Veggie";
-import Popular from "../components/Popular";
+import Header from "../components/Header/Header";
+import Input from "../components/Input/Input";
+import Meanings from "../components/meanings/Meanings";
+import Word from "../components/word/Word";
+
 const Home = () => {
   return (
     <>
-      <Veggie />
-      <Popular />
+      <Header />
+      <Input />
+      <Word />
+      <Meanings />
     </>
   );
 };

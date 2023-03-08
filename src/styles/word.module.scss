@@ -1,0 +1,33 @@
+.word {
+  margin-bottom: 40px;
+}
+
+.inner {
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  text-transform: lowercase;
+  margin-bottom: 10px;
+}
+
+.playIcon {
+  font-size: 40px;
+  width: 70px;
+  height: 70px;
+  background-color: #e9d0fa;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  font-size: 24px;
+  font-weight: 500;
+  color: #9c43d8;
+}
